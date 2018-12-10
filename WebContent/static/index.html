@@ -1,0 +1,145 @@
+<!Doctype html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        header {
+            background-color: bisque;
+            border: 1px solid darkgrey;
+            border-radius: 1rem 1rem 0rem 0rem;
+            text-align: center;
+            padding: 15px;
+        }
+
+        footer {
+            background-color: bisque;
+            border: 1px solid darkgrey;
+            border-radius: 0rem 0rem 1rem 1rem;
+            text-align: center;
+            font-size: 12px;
+            padding: 15px;
+        }
+
+        main {
+            background-color: linen;
+            border: 1px solid lightgray;
+        }
+
+
+
+        .leftPane {
+            background-color: antiquewhite;
+            border: 1px solid lightgray;
+            border-radius: 0.8rem;
+            box-shadow: -2px 1px aquamarine;
+            padding: 5px;
+        }
+
+        .rightPane {
+            background-color: antiquewhite;
+            border: 1px solid lightgray;
+            border-radius: 0.8rem;
+            box-shadow: 2px 1px aquamarine;
+            padding: 5px;
+        }
+
+        .middlePane {
+
+            padding: 5px;
+
+
+        }
+
+        .contentPane {
+            background-color: antiquewhite;
+            border: 1px solid lightgray;
+            border-radius: 0.3rem;
+            box-shadow: 0px 5px aquamarine;
+        }
+
+        .leftPane ul {
+            list-style-type: none;
+            line-height: 1.6;
+            color: sienna;
+            font-size: 1em;
+            font-family: cursive;
+            margin: 0;
+            padding: 0;
+        }
+
+        .leftPane li {
+            background-color: aqua;
+            border-radius: 0.3rem;
+            margin-bottom: 7px;
+
+        }
+
+        .leftPane li:hover {
+            background-color: aquamarine;
+        }
+        .leftPane button, .leftPane button:active{
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            background-color: transparent;
+            border: 0px;
+            border-radius: 0;
+            font-size: 1em;
+            font-family: cursive;
+            margin: 0;
+            padding: 0;
+            width:100%;
+        }
+        
+       
+    </style>
+    <link href='index.css' rel='stylesheet'>
+</head>
+
+<body>
+    <header class='col-12'>
+        <div class='col-12'>
+            My Header
+        </div>
+    </header>
+    <main class='col-12'>
+        <div class='col-2 leftPane'>
+            <ul>
+                <li class='person-info-li'>
+                    <button type=“button” onclick='changeContent("person-info.html")'><label>Personal Information</label></button>
+                </li>
+                <li class='skills-li'>
+                    <button type=“button” onclick='changeContent("skills.html")'><label>Skills</label></button>
+                </li>
+                <li class='academics-li'>
+                    <button type=“button” onclick='changeContent("person-info.html")'> <label>Academics</label></button>
+                </li>
+                <li class='carrier-details-li'>
+                    <button type=“button” onclick='changeContent("person-info.html")'><label>Carrier Details</label></button>
+                </li>
+            </ul>
+        </div>
+        <div class='col-8 middlePane contentPane'>
+            <object id='container_object' data="person-info.html" height='600px' class='col-12'>
+                Your browser doesn’t support the object tag.
+            </object>
+        </div>
+        <div class='col-2 rightPane'>&nbsp;</div>
+
+    </main>
+    <footer class='col-12'>
+        My Footer
+    </footer>
+    <script>
+        function changeContent(url){
+           const container = document.getElementById("container_object");
+           container.setAttribute("data",url);
+           const containerClone = container.cloneNode(true);
+           const parent = container.parentNode;
+           parent.removeChild(container);
+           parent.appendChild(containerClone);
+        }
+    </script>
+</body>
+
+</html>

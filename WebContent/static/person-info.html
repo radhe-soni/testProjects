@@ -1,0 +1,63 @@
+<!Doctype html>
+<html>
+
+<head>
+    <link href='index.css' rel='stylesheet'>
+    <style>
+        .person-info input, .person-info textarea{
+            color: darkgrey;
+            border-radius: 0.3rem;
+        }
+        .person-info div{
+            padding:10px;
+        }
+        </style>
+</head>
+
+<body>
+    <h3 style='line-height: 1.6;
+    color: sienna;
+    font-size: 1em;
+    font-family: cursive;'>Personal Information</h3>
+    <form>
+            <div class='col-12 person-info'>
+                <label class='col-3'>First Name :</label>
+                <input class='col-4' type='text' name='first_name' placeholder='first name' />
+            </div>
+            <div class='col-12 person-info'>
+                <label class='col-3'>Middle Name :</label>
+                <input class='col-4' type='text' name='middle_name' placeholder='middle name' />
+            </div>
+            <div class='col-12 person-info'>
+                <label class='col-3'>Last Name :
+                </label>
+                <input class='col-4' type='text' name='last_name' placeholder='last name' />
+            </div>
+            <div  class='col-12 person-info'>
+                <label class='col-3'>Date of Birth :</label>
+                <input class='col-4' type='date' name='dob' value='Date of Birth' />
+            </div>
+            <div class='col-12 person-info'>
+                <label class='col-3'>Nationality :</label>
+                <input class='col-4' type='text' name='nationality' placeholder='nationality' />
+            </div>
+            <div class='col-12 person-info'>
+                <label class='col-3'>Pin Code :</label>
+                <input class='col-4' type='number' name='pin_code' placeholder='000000' />
+            </div>
+            <div class='col-12 person-info'>
+                <label class='col-3'>City :</label>
+                <input class='col-4' type='text' name='city' placeholder='city' />
+            </div>
+            <div class='col-12 person-info'>
+                <label class='col-3'>Street :</label>
+                <input class='col-4' type='text' name='street' placeholder='street' />
+            </div>
+            <div class='col-12 person-info'>
+                <label class='col-3'>Address :</label>
+                <textarea class='col-8' name='address' placeholder='address... '></textarea>
+            </div>
+    </form>
+</body>
+
+</html>
